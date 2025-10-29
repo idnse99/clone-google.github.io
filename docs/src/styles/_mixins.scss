@@ -3,14 +3,17 @@
 @mixin text-lg{
     font-size: variables.$size-lg;
     font-weight: variables.$bold-weight;
+    color: variables.$color-gray;
 }
 
 @mixin text-md{
     font-size: variables.$size-md;
     font-weight: variables.$bold-weight;
+    color: variables.$color-gray;
 }
 
 @mixin text-sm{
     font-size: variables.$size-sm;
-    font-weight: variables.$bold-weight;
+    font-weight: variables.$bold-regular;
+    color: variables.$color-gray;
 }

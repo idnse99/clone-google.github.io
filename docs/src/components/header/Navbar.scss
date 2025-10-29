@@ -1,43 +1,49 @@
 @use '../../styles/mixins';
 @use '../../styles/variables';
 
-.headr{
-  width: 100vw;
+.header{
+  min-width: 320px;
+  
 }
 
 .navbar{
-  padding: 12px;
-  display: flex;
-  
-    @media (max-width: variables.$desktop){
-    padding: 12px 24px ;
+  padding: 8px;
+
+  &__list{
+    padding: 0 8px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    gap: 4px;
   }
-}
 
-.navbar_list{
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 12px;
-  list-style: none;
-}
+  &__items{
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.navbar_items{
-  @include mixins.text-sm;
-}
+  &__link{
+    @include mixins.text-sm;
+    text-decoration: none;
+    
 
-.items_link{
-  text-decoration: none;
-  color: variables.$color-gray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 2px;
-      cursor: pointer;
+    &:hover{
+      text-decoration: underline 2px;
     }
-}
+  }
 
+  &__icon{
+    cursor: pointer;
+    
+    &:hover{
+      border-radius: 50%;
+      background-color: variables.$color-whiteup;
+      border-color: variables.$color-gray;
+    }
+  }
+
+}
