@@ -2,48 +2,73 @@
 @use '../../styles/variables';
 
 .header{
-  min-width: 320px;
-  
+    padding: 8px;
 }
 
 .navbar{
-  padding: 8px;
-
-  &__list{
-    padding: 0 8px;
+    min-width: 320px;
     display: flex;
     justify-content: end;
     align-items: center;
-    list-style: none;
-    gap: 4px;
-  }
 
-  &__items{
-    min-width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    &__group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
 
-  &__link{
-    @include mixins.text-sm;
-    text-decoration: none;
-    
+        &-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    &:hover{
-      text-decoration: underline 2px;
     }
-  }
 
-  &__icon{
-    cursor: pointer;
-    
-    &:hover{
-      border-radius: 50%;
-      background-color: variables.$color-whiteup;
-      border-color: variables.$color-gray;
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
     }
-  }
 
+    &__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4px;
+    }
+
+    &__icon{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            opacity: 95%;
+            background-color: variables.$color-whiteup;
+            border-radius: 50px;
+        }
+        
+    }
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mixins.text-sm;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+
+    }
+}
+
+.icon{
+    width: 36px;
+    height: 36px;
 }

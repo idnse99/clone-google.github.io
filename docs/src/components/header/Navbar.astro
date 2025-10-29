@@ -2,30 +2,53 @@
 import './Navbar.scss'
 ---
 
-<header class="header">
-  <nav class="navbar">
-    <ul class="navbar__list">
-      <li class="navbar__items">
-        <a class="navbar__link" href="#">Gmail</a>
+<!-- header principal -->
+<header class="header" role="banner">
+  <!-- navbar -->
+  <nav class="navbar" aria-label="Main navigation">
+    <!-- group -->
+    <ul class="navbar__group" role="menubar">
+      
+      <!-- bloque de textos -->
+      <li class="navbar__group-item navbar__group-item--left" role="none">
+        <!-- list -->
+        <ul class="navbar__list" role="menu">
+          <!-- gmail -->
+          <li class="navbar__text" role="none">
+            <a class="navbar__link" href="#" role="menuitem">Gmail</a>
+          </li>
+          <!-- imagenes -->
+          <li class="navbar__text" role="none">
+            <a class="navbar__link" href="#" role="menuitem">Imágenes</a>
+          </li>
+        </ul>
       </li>
-      <li class="navbar__items">
-        <a class="navbar__link" href="#">Imagenes</a>
+
+      <!-- bloque de iconos -->
+      <li class="navbar__group-item navbar__group-item--right" role="none">
+        <!-- list -->
+        <ul class="navbar__list" role="menu">
+          <!-- labs -->
+          <li class="navbar__icon" role="none">
+            <a class="navbar__link" href="#" role="menuitem" aria-label="Search Labs">
+              <img class="icon" src="/icon-labs.svg" alt="">
+            </a>
+          </li>
+          <!-- menu -->
+          <li class="navbar__icon" role="none">
+            <a class="navbar__link" href="#" role="menuitem" aria-label="Menu de aplicaciones">
+              <img class="icon" src="/icon-menu.svg" alt="">
+            </a>
+          </li>
+          <!-- user -->
+          <li class="navbar__icon" role="none">
+            <a class="navbar__link" href="#" role="menuitem" aria-label="Perfil de usuario">
+              <img class="icon" src="/icon-user.svg" alt="">
+            </a>
+          </li>
+        </ul>
       </li>
-      <li class="navbar__items">
-        <a class="navbar__link" href="#">
-          <img class="navbar__icon" src="../../../public/icon-labs.svg" alt="">
-        </a>
-      </li>
-      <li class="navbar__items">
-        <a class="navbar__link" href="#">
-          <img class="navbar__icon" src="../../../public/icon-menu.svg" alt="">
-        </a>
-      </li>
-      <li class="navbar__items">
-        <a class="navbar__link" href="#">
-          <img class="navbar__icon" src="../../../public/icon-user.svg" alt="">
-        </a>
-      </li>
+
     </ul>
   </nav>
 </header>
