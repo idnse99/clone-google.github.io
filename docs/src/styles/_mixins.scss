@@ -1,0 +1,16 @@
+@use './variables';
+
+@mixin text-lg{
+    font-size: variables.$size-lg;
+    font-weight: variables.$bold-weight;
+}
+
+@mixin text-md{
+    font-size: variables.$size-md;
+    font-weight: variables.$bold-weight;
+}
+
+@mixin text-sm{
+    font-size: variables.$size-sm;
+    font-weight: variables.$bold-weight;
+}

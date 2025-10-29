@@ -1,0 +1,43 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.headr{
+  width: 100vw;
+}
+
+.navbar{
+  padding: 12px;
+  display: flex;
+  
+    @media (max-width: variables.$desktop){
+    padding: 12px 24px ;
+  }
+}
+
+.navbar_list{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+
+.navbar_items{
+  @include mixins.text-sm;
+}
+
+.items_link{
+  text-decoration: none;
+  color: variables.$color-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 2px;
+      cursor: pointer;
+    }
+}
+
